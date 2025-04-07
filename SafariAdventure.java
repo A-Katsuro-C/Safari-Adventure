@@ -57,16 +57,16 @@ public class SafariAdventure{
                             pointsToday -= 10;
                             System.out.println("You got attacked, and lost " + pointsToday + " today.");
                         }
-                        eventCounter = 3;
-                        break;
+                        eventCounter = 3; //ends the day
+                        break; 
                     case 2:
                         System.out.println("It started to rain heavily, you wait for it to clear.");
-                        continue;
+                        continue; //continue statement to allow another event
                     case 3:
                         System.out.println("You found an abandoned campsite!");
                         points += 10;
                         pointsToday += 10;
-                        break;
+                        break; //break statements to end the event
                     default:
                         System.out.println("You got raided!");
                         points -= 5;
