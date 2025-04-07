@@ -3,6 +3,7 @@ import java.util.Random;
 
 public class SafariAdventure{
     public static void main(String[] args){
+        //Variables
         Scanner input = new Scanner(System.in);
         Random event = new Random();
         int day = 0;
@@ -33,11 +34,12 @@ public class SafariAdventure{
             } while (!(choice.equals("River") || choice.equals("Jungle") || choice.equals("Desert") || choice.equals("Mountains")));
             
             System.out.println();
+
            //While Loop, Triggers the 3 events that happen during exploration
             while(eventCounter < 3){
                 eventId = event.nextInt(5);
-
                 System.out.print("Event:" + (eventCounter + 1) + " ");
+                //Switch statement for specific events
                 switch (eventId) {
                     case 0:
                         System.out.println("You discovered a hidden treasure!");
@@ -73,6 +75,7 @@ public class SafariAdventure{
                 eventCounter++;
             }
 
+            //Points for the day
             System.out.println("You have: " + pointsToday + " points for today ");
             System.out.println();
         }
